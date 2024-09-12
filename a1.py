@@ -11,7 +11,6 @@ a function. They should be removed and replaced with your solution.
 This portion of the assignment will not be graded, but this gives you some problems to 
 check, if you do not complete the generative AI portion of the assignment.
 """
-
 from typing import List, TypeVar
 
 
@@ -25,8 +24,11 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
-
+    if n < 0:
+        return -1 * n
+    else:
+        return n
+    
 
 def factorial(n: int) -> int:
     """Takes a number n, and computes the factorial n! You can assume the passed in
@@ -38,7 +40,8 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+    raise NotImplementedError("every_other")
+
 
 
 T = TypeVar("T")
