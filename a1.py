@@ -64,12 +64,12 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    result = []
-    for x in range(lst):
-        if (x % 2) != 0:
-            result.append(lst[x])
-    print(result)
-    return result
+    #return lst[::2]
+    new_lst = []
+    for i in range(len(lst)):
+        if i % 2 == 0:
+            new_lst.append(lst[i])
+    return new_lst
 
 
 
@@ -88,7 +88,11 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    sum = 0
+    for i in range(len(lst)):
+        sum += lst[i]
+    return sum 
+
 
 
 def mean(lst: List[int]) -> float:
@@ -100,8 +104,11 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
-
+    sum = 0
+    for i in range(len(lst)):
+        sum += lst[i]
+    sum /= (len(lst))
+    return sum
 
 def median(lst: List[int]) -> float:
     """Takes an ordered list of numbers, and returns the median of the numbers.
@@ -115,7 +122,16 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    median = 0 
+    if len(lst) % 2 == 0:
+        num1 = len(lst)//2
+        num2 = num1+1
+        median = (num1+num2)//2
+        return median
+    else:
+        median = (len(lst)+1)//2
+        return median
+
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
