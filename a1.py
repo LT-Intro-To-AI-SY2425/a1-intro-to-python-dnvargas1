@@ -13,6 +13,8 @@ check, if you do not complete the generative AI portion of the assignment.
 """
 from typing import List, TypeVar
 
+from sqlalchemy import true
+
 
 def absolute(n: int) -> int:
     """Gives the absolute value of the passed in number. Cannot use the built in
@@ -153,7 +155,8 @@ def duck_duck_goose(lst: List[str]) -> List[str]:
     Returns:
         the resulting list after playing duck duck goose
     """
-    raise NotImplementedError("duck_duck_goose")
+        
+    
 
 
 # this line causes the nested code to be skipped if the file is imported instead of run
